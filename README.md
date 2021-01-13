@@ -1,79 +1,118 @@
-# peach-joystick
-> vue虚拟摇杆插件<br>
-> Virtual Joystick component for Vue.js
+# peach-split-button
+
+> vue 悬停分割按钮<br>
+> split button with hover effect component for Vue.js
 
 ## 在线预览 | Preview demo
-https://taoqi0813.github.io/#/peach-joystick
+
+https://taoqi0813.github.io/#/peach-split-button
 
 ## 快速上手 | Getting started
+
 ### 安装 | Installation
-```
-npm install -S peach-joystick
 
 ```
-### 在main.js引用 | In Main.js:  
+npm install -S peach-split-button
+
 ```
-import PeachJoystick from 'peach-joystick'
-Vue.use(PeachJoystick)
+
+### 在 main.js 引用 | In Main.js:
+
+```
+import PeachSplitButton from 'peach-split-button'
+Vue.use(PeachSplitButton)
 ```
 
 ### 用法 | Usage
+
 ```
-<peach-joystick :options="options" @move="move/>
+<peach-split-btn
+  :label="label"
+  :active="active"
+  :split="split"
+  :width="width"
+  :left="left"
+  :top="top"
+  :bg-color="bgColor"
+  :text-color="textColor"
+  :click-func="btnClick"
+>
+  这里用slot自己插菜单
+</peach-split-btn>
 ```
 
 ### 配置 | Options
 
-+ size
-  - 摇杆的尺寸(宽=高) | joystick size(width = height)
+- label
+
+  - 按钮的文本 | main-button label
   - 类型: String | Type: String
-  - 默认值: '120' | Default: '120'
-  - 不要带单位，固定px | no unit, is 'px'
-  
-+ hidden
-  - 显示状态 | joystick hidden
+  - 必填 | Required
+  - 可用插槽替代，slot="label"
+
+- active
+
+  - 激活状态 | button active state
   - 类型: Boolean | Type: Boolean
   - 默认值: false | Default: false
 
-+ position
-  - 摇杆的位置 | joystick position
-  - 类型: String | Type: String
-  - 默认值: 'left-bottom' | Default: 'left-bottom'
-  - 可选值: 'left-bottom/right-bottom' | Options: 'left-bottom/right-bottom'
+- split
 
-+ background
-  - 自定义摇杆的底图 | custom joystick background image
-  - 类型: String | Type: String
-  - 支持网络路径 | support online path
-
-+ joystick
-  - 自定义摇杆的按钮图 | custom joystick button image
-  - 类型: String | Type: String
-  - 支持网络路径 | support online path
-
-+ padding
-  - 摇杆距操作区的内边距 | joystick padding in control area
-  - 类型: Number | Type: Number
-  - 默认值: 25 | Default: 25
-
-+ appendToBody
-  - 组件是否插入至 body 元素上 | joystick append to body
+  - 是否分割 | split button or not
   - 类型: Boolean | Type: Boolean
-  - 默认值: false | Default: false
+  - 默认值: true | Default: true
 
-+ zIndex
-  - 摇杆z-index值 | joystick z-index
-  - 类型: Number | Type: Number
-  - 默认值: 100 | Default: 100
+- width
 
-### 事件 | Events
-#### move()
-+ 摇杆移动事件 | joystick move event: 
-  - 回调参数 { moveForward: Boolean, moveBackward: Boolean, moveLeft: Boolean, moveRight: Boolean } | Backcall Param { moveForward: Boolean, moveBackward: Boolean, moveLeft: Boolean, moveRight: Boolean }
+  - 按钮宽度 | button width
+  - 类型: [String, Number] | Type: [String, Number]
+  - 不要带单位，固定 px | no unit, is 'px'
+  - 默认值: 120 | Default: 120
+
+- left
+
+  - 菜单left | menu left
+  - 类型: [String, Number] | Type: [String, Number]
+  - 不要带单位，固定 px | no unit, is 'px'
+  - 默认值: 0 | Default: 0
+
+- top
+
+  - 菜单top | menu top
+  - 类型: [String, Number] | Type: [String, Number]
+  - 不要带单位，固定 px | no unit, is 'px'
+  - 默认值: 0 | Default: 0
+
+- bg-color
+
+  - 按钮背景色 | button background color
+  - 类型: String | Type: String
+  - 默认值: '#1976d2' | Default: '#1976d2'
+
+- text-color
+ 
+  - 按钮文本色 | button color
+  - 类型: String | Type: String
+  - 默认值: '#fff' | Default: '#fff'
+
+- click-func
+ 
+  - 主按钮点击事件回调函数 | main-button click function
+  - 类型: Function | Type: Function
+  - 回调参数: click event | Arg: click event
+
+### 插槽 | slots
+
+#### slot="default"
+
+- 菜单 | menu
+
+#### slot="label"
+
+- 按钮文本 | button label
 
 ## 更新日志 | Log
-|  版本号   | 更新时间  | 更新内容  |
-|  ----  | ----  | ----  |
-| 0.1.2  | 2020/7/20 | 增加appendToBody和zIndex设置 |
-| 0.1.1  | 2020/6/23 | 修改组件名称 |
-| 0.1.0  | 2020/6/23 | 初始化项目 |
+
+| 版本号 | 更新时间  | 更新内容                         |
+| ------ | --------- | -------------------------------- |
+| 0.1.0  | 2021/1/13 | 初始化项目                       |

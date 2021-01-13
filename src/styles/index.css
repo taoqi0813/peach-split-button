@@ -1,0 +1,235 @@
+.peach-btn-group button {
+  font: inherit;
+  font-family: inherit;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+}
+.peach-btn-group {
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  vertical-align: middle;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  transform: translateY(0);
+  transition: all 0.3s;
+}
+.peach-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+  outline: 0;
+  border: 0;
+  vertical-align: middle;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.715em;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.peach-btn-group > .peach-btn.peach-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  overflow: hidden;
+  border-left-color: rgba(255, 255, 255, 0.3);
+  border-left-width: 0;
+  border-left-style: solid;
+}
+.peach-btn-group.hover > .peach-btn.peach-right {
+  /* width: 30px; */
+  border-left-width: 1px;
+}
+.peach-btn-group > .peach-btn.peach-left {
+  /* width: 120px; */
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  z-index: 1;
+  transition: all 1s;
+  text-align: left;
+}
+.peach-btn-group.hover > .peach-btn.peach-left {
+  /* width: 90px; */
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.peach-focus-helper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1),
+    opacity 0.4s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1),
+    opacity 0.4s cubic-bezier(0.25, 0.8, 0.5, 1);
+  outline: 0;
+}
+.peach-btn:hover .peach-focus-helper {
+  background: currentColor;
+  opacity: 0.15;
+}
+.peach-btn:focus .peach-focus-helper {
+  opacity: 0.22;
+}
+.peach-btn-group.active .peach-focus-helper {
+  background: currentColor;
+  opacity: 0.22;
+}
+.peach-btn-group:active {
+  transform: translateY(3px);
+}
+.peach-focus-helper:before {
+  background: #000;
+}
+.peach-focus-helper:after {
+  background: #fff;
+}
+.peach-focus-helper:before,
+.peach-focus-helper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: inherit;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1),
+    opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1),
+    opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.peach-btn__wrapper {
+  min-height: 2.572em;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 10000;
+  -ms-flex: 10000 1 0%;
+  flex: 10000 1 0%;
+  justify-content: center;
+  align-items: center;
+}
+.peach-btn-group > .peach-btn .peach-btn__wrapper:before {
+  z-index: -1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: -webkit-box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.5, 1),
+    -webkit-box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: inherit;
+}
+.peach-btn__content {
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+.peach-icon {
+  font-size: 1.715em !important;
+  overflow: hidden;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  text-align: center;
+  position: relative;
+  box-sizing: content-box;
+  fill: currentColor;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: inherit;
+  font-size: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  transition: transform 0.28s;
+}
+.peach-icon:after,
+.peach-icon:before {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.peach-btn-group.opened .peach-icon {
+  transform: rotate(180deg);
+}
+.peach-menu {
+  visibility: hidden;
+  position: fixed !important;
+  display: inline-block;
+  max-width: 95vw;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  outline: 0;
+  max-height: 65vh;
+  z-index: 6000;
+}
+.peach-btn-group.opened .peach-menu {
+  visibility: visible;
+}

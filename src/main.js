@@ -1,15 +1,14 @@
-import Joystick from './components/joystick/index.js';
+import SplitBtn from './components/splitbtn/index.js';
+import './styles/index.css'
 
 const components = [
-  Joystick
+  SplitBtn
 ]
 
 const install = function(Vue) {
-
   components.forEach(component => {
     Vue.component(component.name, component);
   });
-
 };
 
 /* istanbul ignore if */
@@ -20,5 +19,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   version: '0.1.0',
   install,
-  Joystick
+  SplitBtn
 };

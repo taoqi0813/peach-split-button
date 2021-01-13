@@ -1,14 +1,14 @@
 {
-  "name": "peach-joystick",
-  "version": "0.1.2",
-  "description": "vue虚拟摇杆插件",
+  "name": "peach-split-button",
+  "version": "0.0.1",
+  "description": "vue悬停分割按钮",
   "keywords": [
-    "joystick",
+    "split-button",
     "vue",
-    "vue-joystick",
-    "虚拟摇杆",
-    "rocker",
-    "vue-rocker"
+    "vue-split-button",
+    "分割按钮",
+    "split-btn",
+    "vue-split-btn"
   ],
   "license": "MIT",
   "main": "src/main.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:taoqi0813/peach-joystick.git"
+    "url": "git@github.com:taoqi0813/peach-split-button.git"
   },
   "dependencies": {
     "core-js": "^3.6.5",

@@ -19,8 +19,8 @@ npm install -S peach-split-button
 ### 在 main.js 引用 | In Main.js:
 
 ```
-import PeachSplitButton from 'peach-split-button'
-Vue.use(PeachSplitButton)
+import PeachSplitBtn from 'peach-split-button'
+Vue.use(PeachSplitBtn)
 ```
 
 ### 用法 | Usage

@@ -218,7 +218,7 @@
 }
 .peach-menu {
   visibility: hidden;
-  position: fixed !important;
+  position: absolute !important;
   display: inline-block;
   max-width: 95vw;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
@@ -228,7 +228,6 @@
   overflow-x: hidden;
   outline: 0;
   max-height: 65vh;
-  z-index: 6000;
 }
 .peach-btn-group.opened .peach-menu {
   visibility: visible;

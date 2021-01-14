@@ -13,7 +13,6 @@ https://taoqi0813.github.io/#/peach-split-button
 
 ```
 npm install -S peach-split-button
-
 ```
 
 ### 在 main.js 引用 | In Main.js:
@@ -33,6 +32,7 @@ Vue.use(PeachSplitBtn)
   :width="width"
   :left="left"
   :top="top"
+  :z-index="zIndex"
   :bg-color="bgColor"
   :text-color="textColor"
   :click-func="btnClick"
@@ -47,7 +47,7 @@ Vue.use(PeachSplitBtn)
 
   - 按钮的文本 | main-button label
   - 类型: String | Type: String
-  - 必填 | Required
+  - 默认值: '' | Default: ''
   - 可用插槽替代，slot="label"
 
 - active
@@ -83,6 +83,12 @@ Vue.use(PeachSplitBtn)
   - 不要带单位，固定 px | no unit, is 'px'
   - 默认值: 0 | Default: 0
 
+- z-index
+
+  - 菜单z-index | menu z-index
+  - 类型: [String, Number] | Type: [String, Number]
+  - 默认值: 1 | Default: 1
+
 - bg-color
 
   - 按钮背景色 | button background color
@@ -115,4 +121,5 @@ Vue.use(PeachSplitBtn)
 
 | 版本号 | 更新时间  | 更新内容                         |
 | ------ | --------- | -------------------------------- |
+| 0.1.1  | 2021/1/14 | 增加z-index属性                       |
 | 0.1.0  | 2021/1/13 | 初始化项目                       |

@@ -56,7 +56,8 @@
       class="peach-menu"
       :style="{
         left: left + 'px',
-        top: offsetHeight + +top + 'px'
+        top: offsetHeight + +top + 'px',
+        zIndex: zIndex
       }"
     >
       <slot></slot>
@@ -88,6 +89,10 @@ export default {
     top: {
       type: [Number, String],
       default: 0
+    },
+    zIndex: {
+      type: [Number, String],
+      default: 1
     },
     bgColor: {
       type: String,

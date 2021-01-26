@@ -35,6 +35,7 @@ Vue.use(PeachSplitBtn)
   :z-index="zIndex"
   :bg-color="bgColor"
   :text-color="textColor"
+  :custom-class="customClass"
   :click-func="btnClick"
 >
   这里用slot自己插菜单
@@ -71,21 +72,21 @@ Vue.use(PeachSplitBtn)
 
 - left
 
-  - 菜单left | menu left
+  - 菜单 left | menu left
   - 类型: [String, Number] | Type: [String, Number]
   - 不要带单位，固定 px | no unit, is 'px'
   - 默认值: 0 | Default: 0
 
 - top
 
-  - 菜单top | menu top
+  - 菜单 top | menu top
   - 类型: [String, Number] | Type: [String, Number]
   - 不要带单位，固定 px | no unit, is 'px'
   - 默认值: 0 | Default: 0
 
 - z-index
 
-  - 菜单z-index | menu z-index
+  - 菜单 z-index | menu z-index
   - 类型: [String, Number] | Type: [String, Number]
   - 默认值: 1 | Default: 1
 
@@ -96,13 +97,19 @@ Vue.use(PeachSplitBtn)
   - 默认值: '#1976d2' | Default: '#1976d2'
 
 - text-color
- 
+
   - 按钮文本色 | button color
   - 类型: String | Type: String
   - 默认值: '#fff' | Default: '#fff'
 
+- custom-class
+
+  - 按钮自定义 class | button custom class
+  - 类型: String | Type: String
+  - 默认值: '' | Default: ''
+
 - click-func
- 
+
   - 主按钮点击事件回调函数 | main-button click function
   - 类型: Function | Type: Function
   - 回调参数: click event | Arg: click event
@@ -119,7 +126,8 @@ Vue.use(PeachSplitBtn)
 
 ## 更新日志 | Log
 
-| 版本号 | 更新时间  | 更新内容                         |
-| ------ | --------- | -------------------------------- |
-| 0.1.1  | 2021/1/14 | 增加z-index属性                       |
-| 0.1.0  | 2021/1/13 | 初始化项目                       |
+| 版本号 | 更新时间  | 更新内容                                   |
+| ------ | --------- | ------------------------------------------ |
+| 0.1.2  | 2021/1/26 | 去掉 menu 默认样式，增加 custom-class 属性 |
+| 0.1.1  | 2021/1/14 | 增加 z-index 属性                          |
+| 0.1.0  | 2021/1/13 | 初始化项目                                 |

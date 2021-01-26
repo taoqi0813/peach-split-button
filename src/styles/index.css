@@ -33,7 +33,7 @@
   vertical-align: middle;
   padding: 0;
   font-size: 14px;
-  line-height: 1.715em;
+  /* line-height: 1.715em; */
   text-decoration: none;
   color: inherit;
   background: transparent;
@@ -124,7 +124,7 @@
     opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .peach-btn__wrapper {
-  min-height: 2.572em;
+  /* min-height: 2.572em; */
   border-radius: inherit;
   width: 100%;
   height: 100%;
@@ -219,15 +219,6 @@
 .peach-menu {
   visibility: hidden;
   position: absolute !important;
-  display: inline-block;
-  max-width: 95vw;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12);
-  background: #fff;
-  overflow-y: auto;
-  overflow-x: hidden;
-  outline: 0;
-  max-height: 65vh;
 }
 .peach-btn-group.opened .peach-menu {
   visibility: visible;

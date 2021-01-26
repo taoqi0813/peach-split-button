@@ -7,6 +7,7 @@
   >
     <button
       class="peach-btn peach-left"
+      :class="customClass"
       :style="{
         background: bgColor,
         color: textColor,
@@ -27,6 +28,7 @@
       v-if="split"
       ref="right-btn"
       class="peach-btn peach-right"
+      :class="customClass"
       :style="{
         background: bgColor,
         color: textColor,
@@ -66,7 +68,6 @@
 </template>
 
 <script>
-import { addClass, removeClass, toggleClass } from '../../../utils'
 export default {
   name: 'PeachSplitBtn',
   props: {
@@ -106,6 +107,10 @@ export default {
       type: Boolean,
       default: true
     },
+    customClass: {
+      type: String,
+      default: ''
+    },
     clickFunc: {
       type: Function
     }
@@ -144,7 +149,6 @@ export default {
     onRightClick() {
       const el = this.$el
       const rightBtn = this.$refs['right-btn']
-      console.log('el:', [el])
       const offsetHeight = el.offsetHeight
       this.offsetHeight = offsetHeight
       this.opened = !this.opened
